@@ -34,3 +34,26 @@ if (marks >= 80) {
 } else {
   console.log("E");
 }
+
+//switch
+
+let marks = 40;
+
+function grade(score) {
+  switch (true) {
+    case score >= 80:
+      return "A";
+      break;
+    case score >= 65:
+      return "B";
+      break;
+    case score >= 50:
+      return "C";
+      break;
+    case score >= 40:
+      return "D";
+      break;
+    default:
+      return "E";
+  }
+}
