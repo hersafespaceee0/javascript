@@ -20,4 +20,3 @@ let car = {
   mileage: 23005,
   colors: ["white", "green", "orange"],
 }; //object
-

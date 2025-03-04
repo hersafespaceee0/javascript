@@ -140,14 +140,51 @@ console.log(people[2].work.company);
 // log the name of Felix's sibling
 const Felix = people.find((person) => person.name === "Felix");
 console.log(Felix.siblings[0].name);
+//console.log(people[5].siblings[0].name)
+
 // log the second school that Diana went to
 const Diana = people.find((person) => person.name === "Diana");
 console.log(Diana.schools[1]);
+
 // the age of the youngest person
 const youngestPerson = people.reduce((youngest, person) =>
   person.age < youngest.age ? person : youngest
 );
 console.log(youngestPerson.age);
+//console.log(people[3].age);
+
 // log the number of Glady's siblings
 const Gladys = people.find((person) => person.name === "Gladys");
 console.log(Gladys.siblings.length);
+
+// the age of the youngest person
+function findYoungestPerson(peopleList) {
+  let youngestAge = peopleList[0].age; // an assumption - first person in the list is the youngest.
+  for (let index = 1; index < peopleList.length; index++) {
+    if (peopleList[index].age < youngestAge) {
+      // if current person in the loop is younger -- update youngestAge
+      youngestAge = peopleList[index].age;
+    }
+  }
+  console.log(youngestAge);
+  // const youngestPerson = peopleList.find(person => person.age ===youngestAge).name
+  // console.log(youngestPerson);
+}
+findYoungestPerson(people);
+
+const username = "kipchirchir";
+//string --- properties --.length
+console.log(username.endsWith("k"));
+console.log(username.endsWith("k"));
+console.log(username.toUpperCase());
+
+const price = 900.865746698;
+console.log(price.toFixed(2)); //numbers after decimal point
+
+//number
+//js global objects -- string, number, array, object, math, date ...provide properties and methods (functions) to help manipulate data
+
+const colors = ["red", "green"];
+colors.push("yellow"); // push - adds to array
+console.log(colors);
+console.log(colors.reverse()); // reverses the order

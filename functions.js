@@ -45,7 +45,29 @@ convertCurrency(543, "japan");
 //global scope vs block scope
 
 //write a function that takes a number as an argument and checks if the number is even or odd
+function checkIfEvenOrOdd(number) {
+  if (number % 2 == 0) {
+    console.log("The number" + "is Even");
+  } else {
+    console.log("The number" + "is Odd");
+  }
+}
+checkIfEvenOrOdd(90);
+checkIfEvenOrOdd(901);
+checkIfEvenOrOdd(875);
+checkIfEvenOrOdd(876);
 
 //write a function that takes in an array of names, loops through the names changing them all to uppercase
+function changeNAmesToUppercase(names) {
+  //["albert","nobert"]
+  let finalArray = [];
+  for (let index = 0; index < names.length; index = index + 1) {
+    finalArray.push(names[index].toUpperCase());
+  }
+  console.log(finalArray);
+}
+changeNAmesToUppercase(["albert", "nobert"]);
+changeNAmesToUppercase(["joy", "jane"]);
+
 
 // strings, numbers and arrays
